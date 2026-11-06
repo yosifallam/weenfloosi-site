@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>وين فلوسي — Ween Floosi</title>
+<meta name="description" content="وين فلوسي: تطبيق بسيط لمصروف البيت والالتزامات والديون ومشاريعك الصغيرة. Ween Floosi: a simple home budget and expense tracker.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=Readex+Pro:wght@500;700&display=swap">
+<style>
+:root{--bg:#F3F5F4;--surface:#fff;--ink:#16231F;--muted:#5E6E68;--line:#DCE3E0;--accent:#0F5C4D;--accent-ink:#fff;--soft:#E1EFEB}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1513;--surface:#17211E;--ink:#E8EFEC;--muted:#93A39D;--line:#2A3833;--accent:#4FC3A6;--accent-ink:#06231C;--soft:#183830}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Readex Pro",Tahoma,sans-serif;line-height:1.7}
+a{color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Readex Pro",sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--ink)}
+.brand img{width:40px;height:40px;border-radius:10px}
+nav a{margin-inline-start:16px;text-decoration:none;font-size:14px;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:28px 0 40px}
+h1{font-family:"Readex Pro",sans-serif;font-size:clamp(30px,5vw,46px);line-height:1.25;margin:0 0 12px}
+.lead{font-size:18px;color:var(--muted);margin:0 0 22px}
+.en{direction:ltr;text-align:left;font-family:"Readex Pro",sans-serif;color:var(--muted);font-size:15px;margin:0 0 24px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:600}
+.btn.alt{background:var(--surface);color:var(--ink);border:1.5px solid var(--line)}
+.soon{font-size:12.5px;color:var(--muted);margin-top:8px}
+.phone{justify-self:center;width:min(280px,80vw);border-radius:32px;border:8px solid var(--ink);box-shadow:0 20px 50px rgba(0,0,0,.18);overflow:hidden;background:var(--surface)}
+.phone img{display:block;width:100%}
+section{padding:36px 0}
+h2{font-family:"Readex Pro",sans-serif;font-size:26px;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px}
+.card b{display:block;font-size:16px;margin-bottom:4px}
+.card span{color:var(--muted);font-size:14px}
+.shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
+.shots img{width:220px;border-radius:20px;border:1px solid var(--line);flex:none}
+.langs{display:flex;flex-wrap:wrap;gap:8px}
+.langs span{background:var(--soft);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:14px}
+footer{border-top:1px solid var(--line);padding:22px 0 36px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}nav a{margin-inline-start:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./"><img src="icon.png" alt="">وين فلوسي</a>
+    <nav><a href="#features">المزايا</a><a href="privacy.html">الخصوصية</a><a href="mailto:support@weenfloosi.com">تواصل</a></nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>اعرف وين راحت فلوس البيت</h1>
+      <p class="lead">سجّل المصروفات بضغطة، وتابع المتبقي من مبلغ الشهر، والتزاماتك وديونك وجمعيتك، وأرسل التقرير على واتساب.</p>
+      <p class="en">Ween Floosi — a simple home budget and expense tracker for families and small businesses. Available in 9 languages.</p>
+      <div class="btns">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app">▶ Google Play</a>
+        <a class="btn alt" href="privacy.html">سياسة الخصوصية</a>
+      </div>
+      <div class="soon">قريباً على App Store</div>
+    </div>
+    <div class="phone"><img src="shot1.jpg" alt="الشاشة الرئيسية لتطبيق وين فلوسي"></div>
+  </div>
+
+  <section id="features">
+    <h2>كل اللي تحتاجه، وبس</h2>
+    <div class="grid">
+      <div class="card"><b>مصروف البيت</b><span>المبلغ المرسل، والمتبقي، ومؤشر لكل التزام: البيت والأطفال والزوجة والسيارة وغيرها.</span></div>
+      <div class="card"><b>الالتزامات الثابتة</b><span>الإيجار والفواتير والأقساط، مع تذكير قبل موعد الدفع.</span></div>
+      <div class="card"><b>الديون والسُّلف</b><span>اللي لك واللي عليك، وتذكير لطيف على واتساب.</span></div>
+      <div class="card"><b>الجمعية</b><span>الأعضاء ودور كل واحد، ومن دفع هذا الشهر.</span></div>
+      <div class="card"><b>دفتر الآجل وعهدة العمل</b><span>حساب زبائنك بالدين، وكشف تقفيل العهدة للمحاسب.</span></div>
+      <div class="card"><b>المشاريع والمزرعة</b><span>التكاليف والمبيعات والربح، مع ضريبة القيمة المضافة حسب بلدك.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>من داخل التطبيق</h2>
+    <div class="shots"><img src="shot1.jpg" alt="الشاشة الرئيسية"><img src="shot2.jpg" alt="الالتزامات"><img src="shot3.jpg" alt="التقرير"></div>
+  </section>
+
+  <section>
+    <h2>بياناتك على جوالك</h2>
+    <p class="lead" style="font-size:16px">لا حساب ولا تسجيل دخول. كل المبالغ تُحفظ على جهازك فقط، ومعها نسخة احتياطية تحفظها أنت.</p>
+    <div class="langs"><span>العربية</span><span>English</span><span>Français</span><span>Español</span><span>Português</span><span>Türkçe</span><span>Bahasa Indonesia</span><span>اردو</span><span>हिन्दी</span></div>
+  </section>
+
+  <footer>
+    <span>© 2026 وين فلوسي · Ween Floosi</span>
+    <span><a href="privacy.html">سياسة الخصوصية · Privacy Policy</a> · <a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></span>
+  </footer>
+</div>
+</body>
+</html>
