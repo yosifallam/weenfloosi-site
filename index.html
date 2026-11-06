@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>وين فلوسي — Ween Floosi</title>
-<meta name="description" content="وين فلوسي: تطبيق بسيط لمصروف البيت والالتزامات والديون ومشاريعك الصغيرة. Ween Floosi: a simple home budget and expense tracker.">
+<title>وين فلوسي — مصروف البيت والالتزامات</title>
+<meta name="description" content="وين فلوسي: تطبيق بسيط لمصروف البيت والالتزامات والديون ومشاريعك الصغيرة. بياناتك تبقى على جوالك.">
+<link rel="canonical" href="https://weenfloosi.com/">
+<link rel="alternate" hreflang="ar" href="https://weenfloosi.com/"><link rel="alternate" hreflang="en" href="https://weenfloosi.com/en/"><link rel="alternate" hreflang="fr" href="https://weenfloosi.com/fr/"><link rel="alternate" hreflang="es" href="https://weenfloosi.com/es/"><link rel="alternate" hreflang="pt" href="https://weenfloosi.com/pt/"><link rel="alternate" hreflang="tr" href="https://weenfloosi.com/tr/"><link rel="alternate" hreflang="id" href="https://weenfloosi.com/id/"><link rel="alternate" hreflang="ur" href="https://weenfloosi.com/ur/"><link rel="alternate" hreflang="hi" href="https://weenfloosi.com/hi/"><link rel="alternate" hreflang="x-default" href="https://weenfloosi.com/">
 <link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=Readex+Pro:wght@500;700&display=swap">
@@ -12,17 +14,20 @@
 :root{--bg:#F3F5F4;--surface:#fff;--ink:#16231F;--muted:#5E6E68;--line:#DCE3E0;--accent:#0F5C4D;--accent-ink:#fff;--soft:#E1EFEB}
 @media (prefers-color-scheme:dark){:root{--bg:#0E1513;--surface:#17211E;--ink:#E8EFEC;--muted:#93A39D;--line:#2A3833;--accent:#4FC3A6;--accent-ink:#06231C;--soft:#183830}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Readex Pro",Tahoma,sans-serif;line-height:1.7}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Readex Pro",system-ui,-apple-system,"Segoe UI",Tahoma,"Noto Sans","Noto Sans Devanagari","Noto Nastaliq Urdu",sans-serif;line-height:1.7}
 a{color:var(--accent)}
 .wrap{max-width:980px;margin:0 auto;padding:0 16px}
-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;font-family:"Readex Pro",sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--ink)}
 .brand img{width:40px;height:40px;border-radius:10px}
-nav a{margin-inline-start:16px;text-decoration:none;font-size:14px;color:var(--muted)}
+.navr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:14px;color:var(--muted)}
+.langsel{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--muted)}
+.langsel select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 8px}
 .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:28px 0 40px}
-h1{font-family:"Readex Pro",sans-serif;font-size:clamp(30px,5vw,46px);line-height:1.25;margin:0 0 12px}
-.lead{font-size:18px;color:var(--muted);margin:0 0 22px}
-.en{direction:ltr;text-align:left;font-family:"Readex Pro",sans-serif;color:var(--muted);font-size:15px;margin:0 0 24px}
+h1{font-family:"Readex Pro",sans-serif;font-size:clamp(28px,5vw,44px);line-height:1.25;margin:0 0 12px}
+.lead{font-size:18px;color:var(--muted);margin:0 0 14px}
+.sub{color:var(--muted);font-size:15px;margin:0 0 24px}
 .btns{display:flex;gap:10px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:600}
 .btn.alt{background:var(--surface);color:var(--ink);border:1.5px solid var(--line)}
@@ -38,59 +43,28 @@ h2{font-family:"Readex Pro",sans-serif;font-size:26px;margin:0 0 18px}
 .shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
 .shots img{width:220px;border-radius:20px;border:1px solid var(--line);flex:none}
 .langs{display:flex;flex-wrap:wrap;gap:8px}
-.langs span{background:var(--soft);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:14px}
+.langs a{background:var(--soft);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:14px;text-decoration:none}
 footer{border-top:1px solid var(--line);padding:22px 0 36px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-@media (max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}nav a{margin-inline-start:10px}}
+.doc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 22px 10px;margin:8px 0 22px}
+.doc h1{font-size:24px;margin:0 0 4px}.doc h2{font-size:17px;margin:18px 0 4px;font-family:inherit}
+.muted{color:var(--muted);font-size:14px}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <a class="brand" href="./"><img src="icon.png" alt="">وين فلوسي</a>
-    <nav><a href="#features">المزايا</a><a href="privacy.html">الخصوصية</a><a href="mailto:support@weenfloosi.com">تواصل</a></nav>
-  </header>
-
-  <div class="hero">
-    <div>
-      <h1>اعرف وين راحت فلوس البيت</h1>
-      <p class="lead">سجّل المصروفات بضغطة، وتابع المتبقي من مبلغ الشهر، والتزاماتك وديونك وجمعيتك، وأرسل التقرير على واتساب.</p>
-      <p class="en">Ween Floosi — a simple home budget and expense tracker for families and small businesses. Available in 9 languages.</p>
-      <div class="btns">
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app">▶ Google Play</a>
-        <a class="btn alt" href="privacy.html">سياسة الخصوصية</a>
-      </div>
-      <div class="soon">قريباً على App Store</div>
-    </div>
-    <div class="phone"><img src="shot1.jpg" alt="الشاشة الرئيسية لتطبيق وين فلوسي"></div>
-  </div>
-
-  <section id="features">
-    <h2>كل اللي تحتاجه، وبس</h2>
-    <div class="grid">
-      <div class="card"><b>مصروف البيت</b><span>المبلغ المرسل، والمتبقي، ومؤشر لكل التزام: البيت والأطفال والزوجة والسيارة وغيرها.</span></div>
-      <div class="card"><b>الالتزامات الثابتة</b><span>الإيجار والفواتير والأقساط، مع تذكير قبل موعد الدفع.</span></div>
-      <div class="card"><b>الديون والسُّلف</b><span>اللي لك واللي عليك، وتذكير لطيف على واتساب.</span></div>
-      <div class="card"><b>الجمعية</b><span>الأعضاء ودور كل واحد، ومن دفع هذا الشهر.</span></div>
-      <div class="card"><b>دفتر الآجل وعهدة العمل</b><span>حساب زبائنك بالدين، وكشف تقفيل العهدة للمحاسب.</span></div>
-      <div class="card"><b>المشاريع والمزرعة</b><span>التكاليف والمبيعات والربح، مع ضريبة القيمة المضافة حسب بلدك.</span></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>من داخل التطبيق</h2>
-    <div class="shots"><img src="shot1.jpg" alt="الشاشة الرئيسية"><img src="shot2.jpg" alt="الالتزامات"><img src="shot3.jpg" alt="التقرير"></div>
-  </section>
-
-  <section>
-    <h2>بياناتك على جوالك</h2>
-    <p class="lead" style="font-size:16px">لا حساب ولا تسجيل دخول. كل المبالغ تُحفظ على جهازك فقط، ومعها نسخة احتياطية تحفظها أنت.</p>
-    <div class="langs"><span>العربية</span><span>English</span><span>Français</span><span>Español</span><span>Português</span><span>Türkçe</span><span>Bahasa Indonesia</span><span>اردو</span><span>हिन्दी</span></div>
-  </section>
-
-  <footer>
-    <span>© 2026 وين فلوسي · Ween Floosi</span>
-    <span><a href="privacy.html">سياسة الخصوصية · Privacy</a> · <a href="terms.html">الشروط · Terms</a> · <a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></span>
-  </footer>
+<header><a class="brand" href="https://weenfloosi.com/"><img src="icon.png" alt="">وين فلوسي</a><div class="navr"><nav><a href="https://weenfloosi.com/#features">المزايا</a> &nbsp; <a href="https://weenfloosi.com/privacy.html">الخصوصية</a> &nbsp; <a href="mailto:support@weenfloosi.com">تواصل</a></nav><label class="langsel"><span aria-hidden="true">🌐</span><span class="sr">اللغة</span><select aria-label="اللغة" onchange="try{localStorage.setItem('wf-site-lang',this.options[this.selectedIndex].lang)}catch(e){};location.href=this.value"><option value="https://weenfloosi.com/" selected lang="ar">العربية</option><option value="https://weenfloosi.com/en/" lang="en">English</option><option value="https://weenfloosi.com/fr/" lang="fr">Français</option><option value="https://weenfloosi.com/es/" lang="es">Español</option><option value="https://weenfloosi.com/pt/" lang="pt">Português</option><option value="https://weenfloosi.com/tr/" lang="tr">Türkçe</option><option value="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</option><option value="https://weenfloosi.com/ur/" lang="ur">اردو</option><option value="https://weenfloosi.com/hi/" lang="hi">हिन्दी</option></select></label></div></header>
+<div class="hero"><div><h1>اعرف وين راحت فلوس البيت</h1><p class="lead">سجّل المصروفات بضغطة، وتابع المتبقي من مبلغ الشهر، والتزاماتك وديونك وجمعيتك، وأرسل التقرير على واتساب.</p><p class="sub">تطبيق بسيط لميزانية البيت والمصروفات للعائلات وأصحاب المشاريع الصغيرة، متوفر بـ 9 لغات.</p><div class="btns"><a class="btn" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app">▶ Google Play</a><a class="btn alt" href="https://weenfloosi.com/privacy.html">سياسة الخصوصية</a></div><div class="soon">قريباً على App Store</div></div><div class="phone"><img src="shot1.jpg" alt="الشاشة الرئيسية لتطبيق وين فلوسي"></div></div>
+<section id="features"><h2>كل اللي تحتاجه، وبس</h2><div class="grid"><div class="card"><b>مصروف البيت</b><span>المبلغ المرسل، والمتبقي، ومؤشر لكل التزام: البيت والأطفال والزوجة والسيارة وغيرها.</span></div><div class="card"><b>الالتزامات الثابتة</b><span>الإيجار والفواتير والأقساط، مع تذكير قبل موعد الدفع.</span></div><div class="card"><b>الديون والسُّلف</b><span>اللي لك واللي عليك، وتذكير لطيف على واتساب.</span></div><div class="card"><b>الجمعية</b><span>الأعضاء ودور كل واحد، ومن دفع هذا الشهر.</span></div><div class="card"><b>دفتر الآجل وعهدة العمل</b><span>حساب زبائنك بالدين، وكشف تقفيل العهدة للمحاسب.</span></div><div class="card"><b>المشاريع والمزرعة</b><span>التكاليف والمبيعات والربح، مع ضريبة القيمة المضافة حسب بلدك.</span></div></div></section>
+<section><h2>من داخل التطبيق</h2><div class="shots"><img src="shot1.jpg" alt="الشاشة الرئيسية"><img src="shot2.jpg" alt="الالتزامات"><img src="shot3.jpg" alt="التقرير"></div></section>
+<section><h2>بياناتك على جوالك</h2><p class="lead" style="font-size:16px">لا حساب ولا تسجيل دخول. كل المبالغ تُحفظ على جهازك فقط، ومعها نسخة احتياطية تحفظها أنت.</p><div class="langs"><a href="https://weenfloosi.com/" lang="ar">العربية</a><a href="https://weenfloosi.com/en/" lang="en">English</a><a href="https://weenfloosi.com/fr/" lang="fr">Français</a><a href="https://weenfloosi.com/es/" lang="es">Español</a><a href="https://weenfloosi.com/pt/" lang="pt">Português</a><a href="https://weenfloosi.com/tr/" lang="tr">Türkçe</a><a href="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</a><a href="https://weenfloosi.com/ur/" lang="ur">اردو</a><a href="https://weenfloosi.com/hi/" lang="hi">हिन्दी</a></div></section>
+<footer><span>© 2026 وين فلوسي · Ween Floosi</span><span><a href="https://weenfloosi.com/privacy.html">سياسة الخصوصية</a> · <a href="https://weenfloosi.com/terms.html">شروط الاستخدام</a> · <a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></span></footer>
 </div>
+<script>
+(function(){try{if(location.pathname!=='/'&&location.pathname!=='/index.html')return;
+var s=localStorage.getItem('wf-site-lang');var L=["ar", "en", "fr", "es", "pt", "tr", "id", "ur", "hi"];
+if(!s){var n=(navigator.languages||[navigator.language||'ar']);for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(L.indexOf(c)>=0){s=c;break}}}
+if(s&&s!=='ar'&&L.indexOf(s)>=0)location.replace('/'+s+'/');}catch(e){}})();
+</script>
 </body>
 </html>

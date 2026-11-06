@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ween Floosi — Budget de la maison et suivi des dépenses</title>
+<meta name="description" content="Ween Floosi : une appli simple pour les dépenses de la maison, les charges, les dettes et les petits projets. Vos données restent sur votre téléphone.">
+<link rel="canonical" href="https://weenfloosi.com/fr/">
+<link rel="alternate" hreflang="ar" href="https://weenfloosi.com/"><link rel="alternate" hreflang="en" href="https://weenfloosi.com/en/"><link rel="alternate" hreflang="fr" href="https://weenfloosi.com/fr/"><link rel="alternate" hreflang="es" href="https://weenfloosi.com/es/"><link rel="alternate" hreflang="pt" href="https://weenfloosi.com/pt/"><link rel="alternate" hreflang="tr" href="https://weenfloosi.com/tr/"><link rel="alternate" hreflang="id" href="https://weenfloosi.com/id/"><link rel="alternate" hreflang="ur" href="https://weenfloosi.com/ur/"><link rel="alternate" hreflang="hi" href="https://weenfloosi.com/hi/"><link rel="alternate" hreflang="x-default" href="https://weenfloosi.com/">
+<link rel="icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=Readex+Pro:wght@500;700&display=swap">
+<style>
+:root{--bg:#F3F5F4;--surface:#fff;--ink:#16231F;--muted:#5E6E68;--line:#DCE3E0;--accent:#0F5C4D;--accent-ink:#fff;--soft:#E1EFEB}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1513;--surface:#17211E;--ink:#E8EFEC;--muted:#93A39D;--line:#2A3833;--accent:#4FC3A6;--accent-ink:#06231C;--soft:#183830}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Readex Pro",system-ui,-apple-system,"Segoe UI",Tahoma,"Noto Sans","Noto Sans Devanagari","Noto Nastaliq Urdu",sans-serif;line-height:1.7}
+a{color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Readex Pro",sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--ink)}
+.brand img{width:40px;height:40px;border-radius:10px}
+.navr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:14px;color:var(--muted)}
+.langsel{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--muted)}
+.langsel select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 8px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:28px 0 40px}
+h1{font-family:"Readex Pro",sans-serif;font-size:clamp(28px,5vw,44px);line-height:1.25;margin:0 0 12px}
+.lead{font-size:18px;color:var(--muted);margin:0 0 14px}
+.sub{color:var(--muted);font-size:15px;margin:0 0 24px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:600}
+.btn.alt{background:var(--surface);color:var(--ink);border:1.5px solid var(--line)}
+.soon{font-size:12.5px;color:var(--muted);margin-top:8px}
+.phone{justify-self:center;width:min(280px,80vw);border-radius:32px;border:8px solid var(--ink);box-shadow:0 20px 50px rgba(0,0,0,.18);overflow:hidden;background:var(--surface)}
+.phone img{display:block;width:100%}
+section{padding:36px 0}
+h2{font-family:"Readex Pro",sans-serif;font-size:26px;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px}
+.card b{display:block;font-size:16px;margin-bottom:4px}
+.card span{color:var(--muted);font-size:14px}
+.shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
+.shots img{width:220px;border-radius:20px;border:1px solid var(--line);flex:none}
+.langs{display:flex;flex-wrap:wrap;gap:8px}
+.langs a{background:var(--soft);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:14px;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:22px 0 36px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.doc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 22px 10px;margin:8px 0 22px}
+.doc h1{font-size:24px;margin:0 0 4px}.doc h2{font-size:17px;margin:18px 0 4px;font-family:inherit}
+.muted{color:var(--muted);font-size:14px}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="https://weenfloosi.com/fr/"><img src="../icon.png" alt="">Ween Floosi</a><div class="navr"><nav><a href="https://weenfloosi.com/fr/#features">Fonctionnalités</a> &nbsp; <a href="https://weenfloosi.com/fr/privacy.html">Confidentialité</a> &nbsp; <a href="mailto:support@weenfloosi.com">Contact</a></nav><label class="langsel"><span aria-hidden="true">🌐</span><span class="sr">Langue</span><select aria-label="Langue" onchange="try{localStorage.setItem('wf-site-lang',this.options[this.selectedIndex].lang)}catch(e){};location.href=this.value"><option value="https://weenfloosi.com/" lang="ar">العربية</option><option value="https://weenfloosi.com/en/" lang="en">English</option><option value="https://weenfloosi.com/fr/" selected lang="fr">Français</option><option value="https://weenfloosi.com/es/" lang="es">Español</option><option value="https://weenfloosi.com/pt/" lang="pt">Português</option><option value="https://weenfloosi.com/tr/" lang="tr">Türkçe</option><option value="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</option><option value="https://weenfloosi.com/ur/" lang="ur">اردو</option><option value="https://weenfloosi.com/hi/" lang="hi">हिन्दी</option></select></label></div></header>
+<div class="hero"><div><h1>Sachez où part l&#x27;argent de la maison</h1><p class="lead">Notez vos dépenses en un geste, suivez ce qu&#x27;il reste du budget du mois, vos charges, vos dettes et votre tontine, et envoyez le rapport sur WhatsApp.</p><p class="sub">Une appli simple de budget et de suivi des dépenses pour les familles et les petits commerces. Disponible en 9 langues.</p><div class="btns"><a class="btn" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app">▶ Google Play</a><a class="btn alt" href="https://weenfloosi.com/fr/privacy.html">Politique de confidentialité</a></div><div class="soon">Bientôt sur l&#x27;App Store</div></div><div class="phone"><img src="../shot1.jpg" alt="Écran d&#x27;accueil de Ween Floosi"></div></div>
+<section id="features"><h2>Tout ce qu&#x27;il vous faut, rien de plus</h2><div class="grid"><div class="card"><b>Dépenses de la maison</b><span>Le budget du mois, ce qu&#x27;il reste, et une jauge par catégorie : maison, enfants, épouse, voiture et plus encore.</span></div><div class="card"><b>Charges fixes</b><span>Loyer, factures et mensualités, avec un rappel avant chaque échéance.</span></div><div class="card"><b>Dettes et prêts</b><span>Ce qu&#x27;on vous doit et ce que vous devez, avec un rappel WhatsApp aimable.</span></div><div class="card"><b>Tontine</b><span>Les membres, le tour de chacun, et qui a payé ce mois-ci.</span></div><div class="card"><b>Carnet de crédit et petite caisse pro</b><span>Les clients qui achètent à crédit, et un relevé de petite caisse pour votre comptable.</span></div><div class="card"><b>Projets et ferme</b><span>Coûts, ventes et bénéfice, avec la TVA de votre pays.</span></div></div></section>
+<section><h2>Dans l&#x27;appli</h2><div class="shots"><img src="../shot1.jpg" alt="Écran d&#x27;accueil"><img src="../shot2.jpg" alt="Catégories"><img src="../shot3.jpg" alt="Rapport"></div></section>
+<section><h2>Vos données restent sur votre téléphone</h2><p class="lead" style="font-size:16px">Pas de compte, pas de connexion. Tous les montants sont enregistrés uniquement sur votre appareil, avec un fichier de sauvegarde que vous gardez vous-même.</p><div class="langs"><a href="https://weenfloosi.com/" lang="ar">العربية</a><a href="https://weenfloosi.com/en/" lang="en">English</a><a href="https://weenfloosi.com/fr/" lang="fr">Français</a><a href="https://weenfloosi.com/es/" lang="es">Español</a><a href="https://weenfloosi.com/pt/" lang="pt">Português</a><a href="https://weenfloosi.com/tr/" lang="tr">Türkçe</a><a href="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</a><a href="https://weenfloosi.com/ur/" lang="ur">اردو</a><a href="https://weenfloosi.com/hi/" lang="hi">हिन्दी</a></div></section>
+<footer><span>© 2026 Ween Floosi · Ween Floosi</span><span><a href="https://weenfloosi.com/fr/privacy.html">Politique de confidentialité</a> · <a href="https://weenfloosi.com/fr/terms.html">Conditions d&#x27;utilisation</a> · <a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></span></footer>
+</div>
+</body>
+</html>

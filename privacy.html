@@ -3,77 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>سياسة الخصوصية — Ween Floosi Privacy Policy</title>
+<title>سياسة الخصوصية — وين فلوسي</title>
+
+<link rel="canonical" href="https://weenfloosi.com/privacy.html">
+<link rel="alternate" hreflang="ar" href="https://weenfloosi.com/privacy.html"><link rel="alternate" hreflang="en" href="https://weenfloosi.com/en/privacy.html"><link rel="alternate" hreflang="fr" href="https://weenfloosi.com/fr/privacy.html"><link rel="alternate" hreflang="es" href="https://weenfloosi.com/es/privacy.html"><link rel="alternate" hreflang="pt" href="https://weenfloosi.com/pt/privacy.html"><link rel="alternate" hreflang="tr" href="https://weenfloosi.com/tr/privacy.html"><link rel="alternate" hreflang="id" href="https://weenfloosi.com/id/privacy.html"><link rel="alternate" hreflang="ur" href="https://weenfloosi.com/ur/privacy.html"><link rel="alternate" hreflang="hi" href="https://weenfloosi.com/hi/privacy.html"><link rel="alternate" hreflang="x-default" href="https://weenfloosi.com/privacy.html">
 <link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=Readex+Pro:wght@500;700&display=swap">
 <style>
-:root{--bg:#F3F5F4;--surface:#fff;--ink:#16231F;--muted:#5E6E68;--line:#DCE3E0;--accent:#0F5C4D}
-@media (prefers-color-scheme:dark){:root{--bg:#0E1513;--surface:#17211E;--ink:#E8EFEC;--muted:#93A39D;--line:#2A3833;--accent:#4FC3A6}}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",Tahoma,sans-serif;line-height:1.8}
+:root{--bg:#F3F5F4;--surface:#fff;--ink:#16231F;--muted:#5E6E68;--line:#DCE3E0;--accent:#0F5C4D;--accent-ink:#fff;--soft:#E1EFEB}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1513;--surface:#17211E;--ink:#E8EFEC;--muted:#93A39D;--line:#2A3833;--accent:#4FC3A6;--accent-ink:#06231C;--soft:#183830}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Readex Pro",system-ui,-apple-system,"Segoe UI",Tahoma,"Noto Sans","Noto Sans Devanagari","Noto Nastaliq Urdu",sans-serif;line-height:1.7}
 a{color:var(--accent)}
-.wrap{max-width:780px;margin:0 auto;padding:24px 16px 48px}
-.doc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 22px 10px;margin-bottom:22px}
-h1{font-size:24px;margin:0 0 4px}h2{font-size:17px;margin:18px 0 4px}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Readex Pro",sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--ink)}
+.brand img{width:40px;height:40px;border-radius:10px}
+.navr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:14px;color:var(--muted)}
+.langsel{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--muted)}
+.langsel select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 8px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:28px 0 40px}
+h1{font-family:"Readex Pro",sans-serif;font-size:clamp(28px,5vw,44px);line-height:1.25;margin:0 0 12px}
+.lead{font-size:18px;color:var(--muted);margin:0 0 14px}
+.sub{color:var(--muted);font-size:15px;margin:0 0 24px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:600}
+.btn.alt{background:var(--surface);color:var(--ink);border:1.5px solid var(--line)}
+.soon{font-size:12.5px;color:var(--muted);margin-top:8px}
+.phone{justify-self:center;width:min(280px,80vw);border-radius:32px;border:8px solid var(--ink);box-shadow:0 20px 50px rgba(0,0,0,.18);overflow:hidden;background:var(--surface)}
+.phone img{display:block;width:100%}
+section{padding:36px 0}
+h2{font-family:"Readex Pro",sans-serif;font-size:26px;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px}
+.card b{display:block;font-size:16px;margin-bottom:4px}
+.card span{color:var(--muted);font-size:14px}
+.shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
+.shots img{width:220px;border-radius:20px;border:1px solid var(--line);flex:none}
+.langs{display:flex;flex-wrap:wrap;gap:8px}
+.langs a{background:var(--soft);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:14px;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:22px 0 36px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.doc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 22px 10px;margin:8px 0 22px}
+.doc h1{font-size:24px;margin:0 0 4px}.doc h2{font-size:17px;margin:18px 0 4px;font-family:inherit}
 .muted{color:var(--muted);font-size:14px}
-.en{direction:ltr;text-align:left;font-family:Arial,Helvetica,sans-serif}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<p><a href="./">← وين فلوسي</a> · <a href="#en">English</a></p>
-
-<div class="doc">
-<h1>سياسة الخصوصية — تطبيق «وين فلوسي»</h1>
-<p class="muted">آخر تحديث: 7 نوفمبر 2026</p>
-
-<h2>البيانات التي تدخلها</h2>
-<p>المبالغ والمصروفات والالتزامات والديون والأسماء التي تكتبها تُحفظ على جهازك فقط. لا نرسلها إلى أي خادم، ولا نطلب إنشاء حساب أو تسجيل دخول، ولا نستطيع الاطلاع عليها.</p>
-
-<h2>الإعلانات</h2>
-<p>في الباقة المجانية يعرض التطبيق إعلانات من Google AdMob (إعلان بانر، وإعلان فيديو اختياري تشاهده بنفسك مقابل فتح مزايا مؤقتاً). قد تجمع Google معرّف الإعلانات في جهازك وبيانات تقنية عامة (مثل نوع الجهاز والموقع التقريبي) لعرض الإعلانات وقياس أدائها، وفق <a href="https://policies.google.com/privacy">سياسة خصوصية Google</a> و<a href="https://policies.google.com/technologies/partner-sites">طريقة استخدام Google للبيانات</a>.</p>
-<p>للمستخدمين في أوروبا وبعض الدول تظهر رسالة لطلب الموافقة، ويمكن تغيير الاختيار في أي وقت من «خيارات الخصوصية والإعلانات» داخل التطبيق. ويمكنك إيقاف تخصيص الإعلانات أو إعادة تعيين معرّف الإعلانات من إعدادات جهازك. لا تظهر أي إعلانات بعد الاشتراك في باقة مدفوعة.</p>
-
-<h2>الشراء والاشتراكات</h2>
-<p>تتم عمليات الشراء عبر Google Play أو App Store، ونستخدم خدمة RevenueCat للتحقق من حالة الاشتراك باستخدام معرّف مجهول. لا نطّلع على بيانات الدفع أو البطاقة. <a href="https://www.revenuecat.com/privacy">سياسة خصوصية RevenueCat</a>.</p>
-
-<h2>التذكيرات والتقارير</h2>
-<p>تذكيرات المواعيد إشعارات محلية على جهازك. وعند «إرسال التقرير» أو «تذكير واتساب» يُرسل النص فقط إلى التطبيق الذي تختاره أنت، ويبقى الإرسال بيدك.</p>
-
-<h2>الأطفال</h2>
-<p>التطبيق موجّه للبالغين، وغير موجّه للأطفال دون 13 سنة، ولا نجمع بياناتهم عن قصد.</p>
-
-<h2>حذف البيانات</h2>
-<p>بما أن بياناتك على جهازك فقط، فحذف التطبيق أو مسح بياناته يحذفها نهائياً. احتفظ بنسخة احتياطية من داخل التطبيق إن أردت.</p>
-
-<h2>التواصل</h2>
-<p>لأي سؤال: <a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></p>
-</div>
-
-<div class="doc en" id="en" dir="ltr" lang="en">
-<h1>Privacy Policy — Ween Floosi</h1>
-<p class="muted">Last updated: November 7, 2026</p>
-
-<h2>Data you enter</h2>
-<p>Amounts, expenses, categories, debts and names you type are stored only on your device. We do not send them to any server, we do not require an account or sign-in, and we cannot access them.</p>
-
-<h2>Advertising</h2>
-<p>The free plan shows ads from Google AdMob (a banner, and an optional video you choose to watch to unlock features temporarily). Google may collect your device's advertising ID and general technical data (such as device type and approximate location) to serve and measure ads, as described in <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses data</a>.</p>
-<p>Users in the EEA, UK, Switzerland and some other regions are asked for consent, and can change their choice at any time from "Privacy &amp; ad choices" in the app. You can also opt out of personalized ads or reset your advertising ID in your device settings. No ads are shown on paid plans.</p>
-
-<h2>Purchases and subscriptions</h2>
-<p>Purchases are processed by Google Play or the App Store. We use RevenueCat to verify subscription status with an anonymous identifier. We never see your payment or card details. <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a>.</p>
-
-<h2>Reminders and reports</h2>
-<p>Due-date reminders are local notifications on your device. When you share a report or a WhatsApp reminder, the text goes only to the app you choose, and you decide whether to send it.</p>
-
-<h2>Children</h2>
-<p>The app is intended for adults and is not directed at children under 13. We do not knowingly collect their data.</p>
-
-<h2>Deleting your data</h2>
-<p>Because your data stays on your device, uninstalling the app or clearing its data deletes it permanently. Use the in-app backup if you want to keep a copy.</p>
-
-<h2>Contact</h2>
-<p><a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></p>
-</div>
+<header><a class="brand" href="https://weenfloosi.com/"><img src="icon.png" alt="">وين فلوسي</a><div class="navr"><nav><a href="https://weenfloosi.com/#features">المزايا</a> &nbsp; <a href="https://weenfloosi.com/privacy.html">الخصوصية</a> &nbsp; <a href="mailto:support@weenfloosi.com">تواصل</a></nav><label class="langsel"><span aria-hidden="true">🌐</span><span class="sr">اللغة</span><select aria-label="اللغة" onchange="try{localStorage.setItem('wf-site-lang',this.options[this.selectedIndex].lang)}catch(e){};location.href=this.value"><option value="https://weenfloosi.com/privacy.html" selected lang="ar">العربية</option><option value="https://weenfloosi.com/en/privacy.html" lang="en">English</option><option value="https://weenfloosi.com/fr/privacy.html" lang="fr">Français</option><option value="https://weenfloosi.com/es/privacy.html" lang="es">Español</option><option value="https://weenfloosi.com/pt/privacy.html" lang="pt">Português</option><option value="https://weenfloosi.com/tr/privacy.html" lang="tr">Türkçe</option><option value="https://weenfloosi.com/id/privacy.html" lang="id">Bahasa Indonesia</option><option value="https://weenfloosi.com/ur/privacy.html" lang="ur">اردو</option><option value="https://weenfloosi.com/hi/privacy.html" lang="hi">हिन्दी</option></select></label></div></header>
+<div class="doc" lang="ar" dir="rtl"><h1>سياسة الخصوصية — تطبيق «وين فلوسي»</h1><p class="muted">آخر تحديث: 7 نوفمبر 2026</p><h2>البيانات التي تدخلها</h2><p>المبالغ والمصروفات والالتزامات والديون والأسماء التي تكتبها تُحفظ على جهازك فقط. لا نرسلها إلى أي خادم، ولا نطلب إنشاء حساب أو تسجيل دخول، ولا نستطيع الاطلاع عليها.</p><h2>الإعلانات</h2><p>في الباقة المجانية يعرض التطبيق إعلانات من Google AdMob (إعلان بانر، وإعلان فيديو اختياري تشاهده بنفسك مقابل فتح مزايا مؤقتاً). قد تجمع Google معرّف الإعلانات في جهازك وبيانات تقنية عامة (مثل نوع الجهاز والموقع التقريبي) لعرض الإعلانات وقياس أدائها، وفق <a href="https://policies.google.com/privacy">سياسة خصوصية Google</a> و<a href="https://policies.google.com/technologies/partner-sites">طريقة استخدام Google للبيانات</a>.</p><p>للمستخدمين في أوروبا وبعض الدول تظهر رسالة لطلب الموافقة، ويمكن تغيير الاختيار في أي وقت من «خيارات الخصوصية والإعلانات» داخل التطبيق. ويمكنك إيقاف تخصيص الإعلانات أو إعادة تعيين معرّف الإعلانات من إعدادات جهازك. لا تظهر أي إعلانات بعد الاشتراك في باقة مدفوعة.</p><h2>الشراء والاشتراكات</h2><p>تتم عمليات الشراء عبر Google Play أو App Store، ونستخدم خدمة RevenueCat للتحقق من حالة الاشتراك باستخدام معرّف مجهول. لا نطّلع على بيانات الدفع أو البطاقة. <a href="https://www.revenuecat.com/privacy">سياسة خصوصية RevenueCat</a>.</p><h2>التذكيرات والتقارير</h2><p>تذكيرات المواعيد إشعارات محلية على جهازك. وعند «إرسال التقرير» أو «تذكير واتساب» يُرسل النص فقط إلى التطبيق الذي تختاره أنت، ويبقى الإرسال بيدك.</p><h2>الأطفال</h2><p>التطبيق موجّه للبالغين، وغير موجّه للأطفال دون 13 سنة، ولا نجمع بياناتهم عن قصد.</p><h2>حذف البيانات</h2><p>بما أن بياناتك على جهازك فقط، فحذف التطبيق أو مسح بياناته يحذفها نهائياً. احتفظ بنسخة احتياطية من داخل التطبيق إن أردت.</p><h2>التواصل</h2><p><a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></p></div>
+<div class="doc" lang="en" dir="ltr"><h1>Privacy Policy — Ween Floosi</h1><p class="muted">Last updated: November 7, 2026</p><h2>Data you enter</h2><p>Amounts, expenses, categories, debts and names you type are stored only on your device. We do not send them to any server, we do not require an account or sign-in, and we cannot access them.</p><h2>Advertising</h2><p>The free plan shows ads from Google AdMob (a banner, and an optional video you choose to watch to unlock features temporarily). Google may collect your device&#x27;s advertising ID and general technical data (such as device type and approximate location) to serve and measure ads, as described in <a href="https://policies.google.com/privacy">Google&#x27;s Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses data</a>.</p><p>Users in the EEA, UK, Switzerland and some other regions are asked for consent, and can change their choice at any time from &quot;Privacy &amp; ad choices&quot; in the app. You can also opt out of personalized ads or reset your advertising ID in your device settings. No ads are shown on paid plans.</p><h2>Purchases and subscriptions</h2><p>Purchases are processed by Google Play or the App Store. We use RevenueCat to verify subscription status with an anonymous identifier. We never see your payment or card details. <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a>.</p><h2>Reminders and reports</h2><p>Due-date reminders are local notifications on your device. When you share a report or a WhatsApp reminder, the text goes only to the app you choose, and you decide whether to send it.</p><h2>Children</h2><p>The app is intended for adults and is not directed at children under 13. We do not knowingly collect their data.</p><h2>Deleting your data</h2><p>Because your data stays on your device, uninstalling the app or clearing its data deletes it permanently. Use the in-app backup if you want to keep a copy.</p><h2>Contact</h2><p><a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></p></div>
+<footer><span>© 2026 وين فلوسي · Ween Floosi</span><span><a href="https://weenfloosi.com/privacy.html">سياسة الخصوصية</a> · <a href="https://weenfloosi.com/terms.html">شروط الاستخدام</a> · <a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></span></footer>
 </div>
 </body>
 </html>
