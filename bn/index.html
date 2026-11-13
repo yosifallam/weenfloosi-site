@@ -3,62 +3,208 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0B3B32">
 <title>Ween Floosi — সংসারের বাজেট ও খরচের হিসাব</title>
 <meta name="description" content="Ween Floosi: সংসারের খরচ, বিল, ধার আর ছোট প্রজেক্টের জন্য একটি সহজ অ্যাপ। আপনার তথ্য আপনার ফোনেই থাকে।">
 <link rel="canonical" href="https://weenfloosi.com/bn/">
 <link rel="alternate" hreflang="ar" href="https://weenfloosi.com/"><link rel="alternate" hreflang="en" href="https://weenfloosi.com/en/"><link rel="alternate" hreflang="fr" href="https://weenfloosi.com/fr/"><link rel="alternate" hreflang="es" href="https://weenfloosi.com/es/"><link rel="alternate" hreflang="pt" href="https://weenfloosi.com/pt/"><link rel="alternate" hreflang="tr" href="https://weenfloosi.com/tr/"><link rel="alternate" hreflang="id" href="https://weenfloosi.com/id/"><link rel="alternate" hreflang="ur" href="https://weenfloosi.com/ur/"><link rel="alternate" hreflang="hi" href="https://weenfloosi.com/hi/"><link rel="alternate" hreflang="bn" href="https://weenfloosi.com/bn/"><link rel="alternate" hreflang="x-default" href="https://weenfloosi.com/">
 <link rel="icon" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=Readex+Pro:wght@500;700&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
 <style>
-:root{--bg:#F3F5F4;--surface:#fff;--ink:#16231F;--muted:#5E6E68;--line:#DCE3E0;--accent:#0F5C4D;--accent-ink:#fff;--soft:#E1EFEB}
-@media (prefers-color-scheme:dark){:root{--bg:#0E1513;--surface:#17211E;--ink:#E8EFEC;--muted:#93A39D;--line:#2A3833;--accent:#4FC3A6;--accent-ink:#06231C;--soft:#183830}}
+:root{--bg:#F6F1E7;--surface:#fff;--ink:#102A24;--muted:#56675F;--line:#E3D9C6;--green:#0B3B32;--green2:#06231C;--gold:#E0A93B;--gold2:#F2C46A;--mint:#DDF4EC;--mint2:#8EE3C8;--on-green:#F6F1E7;--on-green2:#CFE3DC;--sand:#EDE5D5;--card-ink:#102A24}
+@media (prefers-color-scheme:dark){:root{--bg:#0C1412;--surface:#16201D;--ink:#E8EFEC;--muted:#9AACA6;--line:#26342F;--mint:#183830;--sand:#22302B;--card-ink:#E8EFEC}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Readex Pro",system-ui,-apple-system,"Segoe UI",Tahoma,"Noto Sans","Noto Sans Devanagari","Noto Sans Bengali","Noto Nastaliq Urdu",sans-serif;line-height:1.7}
-a{color:var(--accent)}
-.wrap{max-width:980px;margin:0 auto;padding:0 16px}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:10px;font-family:"Readex Pro",sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--ink)}
-.brand img{width:40px;height:40px;border-radius:10px}
-.navr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-nav a{text-decoration:none;font-size:14px;color:var(--muted)}
-.langsel{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--muted)}
-.langsel select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 8px}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:28px 0 40px}
-h1{font-family:"Readex Pro",sans-serif;font-size:clamp(28px,5vw,44px);line-height:1.25;margin:0 0 12px}
-.lead{font-size:18px;color:var(--muted);margin:0 0 14px}
-.sub{color:var(--muted);font-size:15px;margin:0 0 24px}
-.btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:600}
-.btn.alt{background:var(--surface);color:var(--ink);border:1.5px solid var(--line)}
-.soon{font-size:12.5px;color:var(--muted);margin-top:8px}
-.phone{justify-self:center;width:min(280px,80vw);border-radius:32px;border:8px solid var(--ink);box-shadow:0 20px 50px rgba(0,0,0,.18);overflow:hidden;background:var(--surface)}
-.phone img{display:block;width:100%}
-section{padding:36px 0}
-h2{font-family:"Readex Pro",sans-serif;font-size:26px;margin:0 0 18px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px}
-.card b{display:block;font-size:16px;margin-bottom:4px}
-.card span{color:var(--muted);font-size:14px}
-.shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
-.shots img{width:220px;border-radius:20px;border:1px solid var(--line);flex:none}
-.langs{display:flex;flex-wrap:wrap;gap:8px}
-.langs a{background:var(--soft);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:14px;text-decoration:none}
-footer{border-top:1px solid var(--line);padding:22px 0 36px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.doc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 22px 10px;margin:8px 0 22px}
-.doc h1{font-size:24px;margin:0 0 4px}.doc h2{font-size:17px;margin:18px 0 4px;font-family:inherit}
-.muted{color:var(--muted);font-size:14px}
-@media (max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Alexandria",system-ui,-apple-system,"Segoe UI",Tahoma,"Noto Sans","Noto Sans Devanagari","Noto Sans Bengali","Noto Nastaliq Urdu",sans-serif;line-height:1.7}
+a{color:inherit}
+.d{font-family:"Alexandria","IBM Plex Sans Arabic","Noto Sans Devanagari","Noto Sans Bengali",system-ui,sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.pat{background-color:var(--green);background-image:url("../star.svg");color:var(--on-green)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:21px;color:var(--on-green)}
+.brand img{width:40px;height:40px;border-radius:12px}
+.navr{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.navr nav{display:flex;gap:22px;flex-wrap:wrap}
+.navr nav a{color:var(--on-green2);text-decoration:none;font-size:15px}
+.navr nav a:hover{color:#fff}
+.langsel{display:inline-flex;align-items:center;gap:6px;color:var(--on-green2);font-size:14px}
+.langsel select{font:inherit;color:var(--on-green);background:transparent;border:1px solid rgba(246,241,231,.3);border-radius:18px;padding:6px 10px}
+.langsel option{color:#102A24}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:18px;text-decoration:none;font-weight:700;font-size:17px}
+.btn.gold{background:var(--gold);color:#0B3B32}
+.btn.gold:hover{background:var(--gold2)}
+.btn.ghost{border:1.5px solid rgba(246,241,231,.35);color:var(--on-green);font-weight:600}
+.btn.sm{min-height:42px;font-size:15px;padding:0 18px;border-radius:14px}
+.btn.dark{background:var(--green);color:var(--on-green)}
+.hero{overflow:hidden}
+.hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding-top:52px;padding-bottom:84px}
+.hero .txt{flex:999 1 500px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.badge{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:0 14px;border-radius:17px;background:rgba(224,169,59,.16);color:var(--gold2);font-size:14px;font-weight:600}
+.badge::before{content:"";width:8px;height:8px;border-radius:4px;background:var(--gold2)}
+h1{margin:0;font-weight:900;font-size:clamp(40px,6.2vw,76px);line-height:1.14}
+.g{color:var(--gold2)}
+.lead{margin:0;max-width:560px;font-size:clamp(16.5px,1.6vw,20px);color:var(--on-green2)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:20px;flex-wrap:wrap;font-size:14.5px;color:#A9CFC4}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.soon{font-size:13px;color:#A9CFC4}
+.vis{flex:1 1 360px;min-width:0;position:relative;height:620px;display:flex;justify-content:center;align-items:center}
+.ring{position:absolute;width:min(520px,92vw);aspect-ratio:1;border-radius:50%;border:2px dashed rgba(224,169,59,.35)}
+.glow{position:absolute;width:min(400px,72vw);aspect-ratio:1;border-radius:50%;background:rgba(142,227,200,.10)}
+.phone{position:relative;width:min(290px,64vw);border-radius:40px;border:10px solid var(--green2);background:var(--green2);box-shadow:0 40px 80px rgba(0,0,0,.4);overflow:hidden}
+.phone img{display:block;width:100%;height:auto}
+.fl{position:absolute;border-radius:20px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.fl.safe{top:60px;inset-inline-end:0;background:#F6F1E7;color:#102A24;padding:12px 16px;display:flex;flex-direction:column;transform:rotate(3deg)}
+.fl.safe small{font-size:13px;color:#5A6B63}
+.fl.safe b{font-size:30px;color:#0B3B32;line-height:1.2}
+.fl.safe b span{font-size:15px}
+.fl.qa{bottom:92px;inset-inline-start:-6px;background:#fff;color:#102A24;padding:10px 12px;display:flex;align-items:center;gap:8px;transform:rotate(-3deg)}
+.chip{min-height:32px;padding:0 12px;border-radius:16px;display:inline-flex;align-items:center;gap:6px;font-size:14px}
+.c1{background:#0B3B32;color:#F6F1E7;font-weight:700}.c2{background:#DDF4EC;color:#0B3B32;font-weight:600}.c3{background:#EDE5D5;color:#102A24}
+.fl.st{bottom:26px;inset-inline-end:36px;background:var(--gold);color:#0B3B32;font-weight:700;font-size:14px;min-height:40px;padding:0 14px;display:inline-flex;align-items:center;gap:8px;border-radius:20px}
+section.blk{padding:72px 0 24px}
+.eyebrow{font-size:15px;font-weight:700;color:#B07A12}
+@media (prefers-color-scheme:dark){.eyebrow{color:var(--gold2)}}
+h2{margin:0;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.22}
+.sub{margin:0;font-size:18px;color:var(--muted);max-width:560px}
+.split{display:flex;flex-wrap:wrap;align-items:center;gap:52px}
+.split .txt{flex:999 1 500px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.split .ph{flex:1 1 280px;min-width:0;display:flex;justify-content:center}
+.phone.tilt{width:min(280px,70vw);border-color:#102A24;background:#102A24;transform:rotate(-4deg);box-shadow:0 30px 70px rgba(11,59,50,.25)}
+.demo{background:var(--surface);border:2px solid var(--ink);border-radius:26px;padding:20px;display:flex;flex-direction:column;gap:14px;box-shadow:0 20px 50px rgba(11,59,50,.10);max-width:560px}
+.demo .in{font-size:clamp(22px,2.6vw,30px);font-weight:700;display:flex;align-items:center;gap:6px}
+.demo .in::after{content:"";width:3px;height:1.1em;background:var(--gold);border-radius:2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.demo .chips{display:flex;gap:10px;flex-wrap:wrap}
+.demo .chip{min-height:40px;font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.step.hl{background:var(--gold);border-color:var(--gold);color:#0B3B32}
+.num{width:52px;height:52px;border-radius:16px;background:#0B3B32;color:var(--gold2);display:grid;place-items:center;font-weight:800;font-size:22px}
+.step b{font-size:21px}
+.step span{font-size:16px;color:var(--muted)}
+.step .num,.step.hl .num{color:var(--gold2);font-size:22px}
+.step.hl span{color:#0B3B32}
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:26px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.tile b{font-size:19px}
+.tile span{font-size:15px;color:var(--muted)}
+.tile svg{width:30px;height:30px;stroke:currentColor}
+.tile.mint{background:var(--mint);border-color:transparent}
+.tile.wide{grid-column:span 2;flex-direction:row;align-items:center;gap:18px}
+.tile.ink{background:#102A24;border-color:transparent;color:#F6F1E7}
+.tile.ink span{color:#CFE3DC}
+.tile.big{grid-column:span 2;grid-row:span 2;background:#0B3B32;border:0;color:#F6F1E7;flex-direction:row;align-items:flex-end;gap:22px;overflow:hidden;min-height:440px;padding:30px}
+.tile.big .t{flex:1 1 0;min-width:0;align-self:flex-start;display:flex;flex-direction:column;gap:10px}
+.tile.big b{font-size:27px;line-height:1.3}
+.tile.big span{color:#CFE3DC;font-size:16px}
+.tile.big .phone{flex:none;width:210px;border-width:8px;margin-bottom:-60px;box-shadow:none}
+.priv{display:flex;flex-wrap:wrap;gap:16px}
+.priv .a{flex:999 1 540px;min-width:0;border-radius:34px;padding:44px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.priv .a h2{font-weight:900;font-size:clamp(36px,4.6vw,56px)}
+.priv .a p{margin:0;font-size:18.5px;color:var(--on-green2);max-width:560px}
+.priv .b{flex:1 1 300px;min-width:0;background:var(--green2);border-radius:34px;padding:30px;display:flex;flex-direction:column;align-items:center;gap:16px;color:#F6F1E7}
+.priv .b .phone{width:220px;border-width:8px;border-color:#000;background:#000;box-shadow:none}
+.priv .b b{font-size:20px}
+.langrow{display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between}
+.langrow h2{flex:1 1 300px}
+.langs{flex:999 1 540px;display:flex;flex-wrap:wrap;gap:10px}
+.langs a{min-height:48px;padding:0 20px;border-radius:24px;background:var(--surface);border:1px solid var(--line);display:inline-flex;align-items:center;text-decoration:none;font-size:17px}
+.langs a[aria-current]{background:var(--green);border-color:var(--green);color:#F6F1E7;font-weight:600}
+@media (prefers-color-scheme:dark){.langs a[aria-current]{background:var(--gold);border-color:var(--gold);color:#0B3B32}}
+.final{margin:40px 0 72px;background:var(--gold);color:#0B3B32;border-radius:40px;padding:52px 44px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:26px;position:relative;overflow:hidden}
+.final h2{font-weight:900}
+.final p{margin:6px 0 0;font-size:19px;font-weight:600}
+.final>*{position:relative}
+.final .deco{position:absolute;inset-inline-start:-90px;bottom:-120px;width:360px;height:360px;opacity:.2}
+footer{background:var(--green);color:var(--on-green2)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;padding-top:28px;padding-bottom:36px;font-size:15px}
+footer .wrap>span{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+footer img{width:32px;height:32px;border-radius:10px}
+footer a{color:var(--on-green2)}
+@media (max-width:900px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.tile.big{min-height:0}}
+@media (max-width:640px){
+ .navr nav{display:none}
+ .hero .wrap{padding-top:22px;padding-bottom:40px;gap:20px}
+ .hero .btns .btn{flex:1 1 100%}
+ .vis{height:500px}
+ .fl.safe b{font-size:22px}.fl.safe{top:40px;padding:10px 12px}
+ .fl.qa{bottom:70px}.fl.st{bottom:14px}
+ section.blk{padding:52px 0 12px}
+ .steps{grid-template-columns:1fr}
+ .bento{grid-template-columns:1fr}
+ .tile.big,.tile.wide{grid-column:auto;grid-row:auto}
+ .tile.big{flex-direction:column;align-items:center;padding:24px 22px 0}
+ .tile.big .phone{width:190px;margin-bottom:-40px}
+ .tile.wide{flex-direction:column;align-items:flex-start}
+ .priv .a{padding:28px}
+ .final{padding:32px 24px;border-radius:30px}
+ .final .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.demo .in::after{animation:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header><a class="brand" href="https://weenfloosi.com/bn/"><img src="../icon.png" alt="">Ween Floosi</a><div class="navr"><nav><a href="https://weenfloosi.com/bn/#features">সুবিধাসমূহ</a> &nbsp; <a href="https://weenfloosi.com/bn/privacy.html">গোপনীয়তা</a> &nbsp; <a href="mailto:support@weenfloosi.com">যোগাযোগ</a></nav><label class="langsel"><span aria-hidden="true">🌐</span><span class="sr">ভাষা</span><select aria-label="ভাষা" onchange="try{localStorage.setItem('wf-site-lang',this.options[this.selectedIndex].lang)}catch(e){};location.href=this.value"><option value="https://weenfloosi.com/" lang="ar">العربية</option><option value="https://weenfloosi.com/en/" lang="en">English</option><option value="https://weenfloosi.com/fr/" lang="fr">Français</option><option value="https://weenfloosi.com/es/" lang="es">Español</option><option value="https://weenfloosi.com/pt/" lang="pt">Português</option><option value="https://weenfloosi.com/tr/" lang="tr">Türkçe</option><option value="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</option><option value="https://weenfloosi.com/ur/" lang="ur">اردو</option><option value="https://weenfloosi.com/hi/" lang="hi">हिन्दी</option><option value="https://weenfloosi.com/bn/" selected lang="bn">বাংলা</option></select></label></div></header>
-<div class="hero"><div><h1>সংসারের টাকা কোথায় যায়, জেনে নিন</h1><p class="lead">এক ট্যাপে খরচ লিখুন, দেখুন মাসের বাজেটের কত বাকি আছে, আর বিল, ধার ও সমিতির হিসাব রাখুন। রিপোর্ট পাঠান WhatsApp-এ।</p><p class="sub">পরিবার ও ছোট ব্যবসার জন্য সংসারের বাজেট আর খরচের সহজ হিসাব। ১০টি ভাষায় পাওয়া যায়।</p><div class="btns"><a class="btn" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app">▶ Google Play</a><a class="btn alt" href="https://weenfloosi.com/bn/privacy.html">গোপনীয়তা নীতি</a></div><div class="soon">শিগগিরই App Store-এ আসছে</div></div><div class="phone"><img src="shot1.jpg" alt="Ween Floosi-এর হোম স্ক্রিন"></div></div>
-<section id="features"><h2>যা দরকার সবই আছে, বাড়তি কিছু নেই</h2><div class="grid"><div class="card"><b>সংসারের খরচ</b><span>মাসের বাজেট, কত বাকি আছে, আর প্রতিটি খাতের জন্য আলাদা মিটার: বাসা, বাচ্চারা, স্বামী/স্ত্রী, গাড়ি এবং আরও অনেক কিছু।</span></div><div class="card"><b>নিয়মিত বিল</b><span>বাসাভাড়া, বিদ্যুৎ-গ্যাস-পানির বিল আর কিস্তি, প্রতিটি নির্ধারিত তারিখের আগে রিমাইন্ডারসহ।</span></div><div class="card"><b>দেনা-পাওনা ও ধার</b><span>আপনি কত পাবেন আর কত দেবেন, WhatsApp-এ ভদ্রভাবে মনে করিয়ে দেওয়ার সুবিধাসহ।</span></div><div class="card"><b>সমিতি</b><span>সদস্যরা, প্রত্যেকের পালা, আর এ মাসে কে কে টাকা দিয়েছেন।</span></div><div class="card"><b>বাকির খাতা ও অফিসের অগ্রিম</b><span>যেসব ক্রেতা বাকিতে কেনেন তাঁদের হিসাব, আর আপনার হিসাবরক্ষকের জন্য অগ্রিম টাকার খরচের বিবরণী।</span></div><div class="card"><b>প্রজেক্ট ও খামার</b><span>খরচ, বিক্রি আর লাভ, আপনার দেশের ভ্যাট (VAT) হিসাবসহ।</span></div></div></section>
-<section><h2>অ্যাপের ভেতরে</h2><div class="shots"><img src="shot1.jpg" alt="টাকার জার: এই মাসে বাকি" loading="lazy"><img src="shot2.jpg" alt="এক লাইনে স্মার্ট যোগ" loading="lazy"><img src="shot3.jpg" alt="আজ নিরাপদ খরচ ও খাত" loading="lazy"><img src="shot4.jpg" alt="ডার্ক মোড" loading="lazy"></div></section>
-<section><h2>আপনার তথ্য আপনার ফোনেই থাকে</h2><p class="lead" style="font-size:16px">কোনো অ্যাকাউন্ট নেই, সাইন-ইনও নেই। সব টাকার অঙ্ক শুধু আপনার ডিভাইসেই সেভ থাকে, আর ব্যাকআপ ফাইল আপনি নিজের কাছেই রাখেন।</p><div class="langs"><a href="https://weenfloosi.com/" lang="ar">العربية</a><a href="https://weenfloosi.com/en/" lang="en">English</a><a href="https://weenfloosi.com/fr/" lang="fr">Français</a><a href="https://weenfloosi.com/es/" lang="es">Español</a><a href="https://weenfloosi.com/pt/" lang="pt">Português</a><a href="https://weenfloosi.com/tr/" lang="tr">Türkçe</a><a href="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</a><a href="https://weenfloosi.com/ur/" lang="ur">اردو</a><a href="https://weenfloosi.com/hi/" lang="hi">हिन्दी</a><a href="https://weenfloosi.com/bn/" lang="bn">বাংলা</a></div></section>
-<footer><span>© 2026 Ween Floosi · Ween Floosi</span><span><a href="https://weenfloosi.com/bn/privacy.html">গোপনীয়তা নীতি</a> · <a href="https://weenfloosi.com/bn/terms.html">সেবার শর্তাবলি</a> · <a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></span></footer>
+<div class="pat">
+<header><div class="wrap"><a class="brand d" href="https://weenfloosi.com/bn/"><img src="../icon.png" alt="">Ween Floosi</a><div class="navr"><nav aria-label="মেনু"><a href="https://weenfloosi.com/bn/#how">কীভাবে কাজ করে</a><a href="https://weenfloosi.com/bn/#features">ফিচার</a><a href="https://weenfloosi.com/bn/privacy.html">গোপনীয়তা</a><a href="mailto:support@weenfloosi.com">যোগাযোগ</a></nav><label class="langsel"><span aria-hidden="true">🌐</span><span class="sr">ভাষা</span><select aria-label="ভাষা" onchange="try{localStorage.setItem('wf-site-lang',this.options[this.selectedIndex].lang)}catch(e){};location.href=this.value"><option value="https://weenfloosi.com/" lang="ar">العربية</option><option value="https://weenfloosi.com/en/" lang="en">English</option><option value="https://weenfloosi.com/fr/" lang="fr">Français</option><option value="https://weenfloosi.com/es/" lang="es">Español</option><option value="https://weenfloosi.com/pt/" lang="pt">Português</option><option value="https://weenfloosi.com/tr/" lang="tr">Türkçe</option><option value="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</option><option value="https://weenfloosi.com/ur/" lang="ur">اردو</option><option value="https://weenfloosi.com/hi/" lang="hi">हिन्दी</option><option value="https://weenfloosi.com/bn/" selected lang="bn">বাংলা</option></select></label><a class="btn gold sm d" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app">বিনামূল্যে নিন</a></div></div></header>
+<section class="hero"><div class="wrap">
+<div class="txt">
+<span class="badge">নতুন: সম্পূর্ণ নতুন রূপ</span>
+<h1 class="d">সংসারের সব টাকা,<br>একটি <span class="g">জারে</span>।</h1>
+<p class="lead">এক নজরে দেখুন এই মাসে কত বাকি, আজ নিরাপদে কত খরচ করতে পারেন, আর খরচ লিখুন এক বাক্যে, যেভাবে মুখে বলেন।</p>
+<div class="btns"><a class="btn gold d" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17l14-8.5z"/></svg>Google Play থেকে নিন</a><a class="btn ghost" href="#how">দেখুন কীভাবে কাজ করে</a></div>
+<div class="trust"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8EE3C8" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>অ্যাকাউন্ট বা রেজিস্ট্রেশন নেই</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8EE3C8" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>তথ্য আপনার ফোনেই</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8EE3C8" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>১০টি ভাষা</span></div>
+<div class="soon">শিগগিরই App Store-এ আসছে</div>
 </div>
+<div class="vis" aria-hidden="false">
+<div class="ring" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+<div class="phone"><img src="shot1.jpg" width="540" height="1170" alt="টাকার জার: এই মাসে বাকি"></div>
+<div class="fl safe" aria-hidden="true"><small>আজ নিরাপদে খরচ</small><b class="d">225 <span>৳</span></b></div>
+<div class="fl qa" aria-hidden="true"><span class="chip c1">95 ৳</span><span class="chip c2">বাড়ির জিনিসপত্র</span><span class="chip c3">সবজি</span></div>
+<div class="fl st" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B3B32" stroke-width="2.2" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>১২ দিন বাজেটের মধ্যে</div>
+</div>
+</div></section>
+</div>
+<main>
+<section class="blk" id="how"><div class="wrap split">
+<div class="txt">
+<span class="eyebrow">সবচেয়ে দ্রুত এন্ট্রি</span>
+<h2 class="d">যেভাবে বলেন, সেভাবে লিখুন।</h2>
+<p class="sub">＋ চাপুন আর সাধারণ একটি বাক্য লিখুন। অ্যাপ নিজেই টাকার পরিমাণ, খাত আর বিবরণ বুঝে নেয়, আপনি এক ট্যাপে যোগ করেন। প্রায়ই করা খরচগুলো নিচে তৈরি থাকে।</p>
+<div class="demo" aria-hidden="true"><div class="in d">95 সবজি</div><div class="chips"><span class="chip c1">95 ৳</span><span class="chip c2">বাড়ির জিনিসপত্র</span><span class="chip c3">সবজি</span><span class="chip c3">আজ</span></div></div>
+</div>
+<div class="ph"><div class="phone tilt"><img src="shot2.jpg" width="540" height="1170" loading="lazy" alt="এক লাইনে স্মার্ট যোগ"></div></div>
+</div></section>
+<section class="blk"><div class="wrap">
+<h2 class="d">তিন ধাপে জানুন টাকা কোথায় গেল</h2>
+<div class="steps">
+<div class="step"><span class="num d">1</span><b class="d">জার ভরুন</b><span>এই মাসে পাওয়া টাকা লিখুন, জার ভরে যাবে।</span></div>
+<div class="step"><span class="num d">2</span><b class="d">সঙ্গে সঙ্গে লিখুন</b><span>প্রতিটি খরচ এক বাক্যে বা শর্টকাটে এক ট্যাপে।</span></div>
+<div class="step hl"><span class="num d">3</span><b class="d">নিশ্চিন্তে খরচ করুন</b><span>বলে দেয় আজ কত খরচ করা যায় আর টাকা মাস চলবে কি না।</span></div>
+</div></div></section>
+<section class="blk" id="features"><div class="wrap">
+<h2 class="d">সংসারের সব খরচ, এক জায়গায়</h2>
+<p class="sub" style="margin-top:8px">শুধু যা দরকার তা-ই চালু করুন।</p>
+<div class="bento">
+<div class="tile big"><div class="t"><b class="d">আজ নিরাপদে খরচ</b><span>বকেয়া বিল বাদ দিয়ে বাকি টাকা বাকি দিনগুলোতে ভাগ করে, আর বলে দেয় একই হারে চললে কোন দিন টাকা শেষ হবে।</span></div><div class="phone"><img src="shot3.jpg" width="540" height="1170" loading="lazy" alt="আজ নিরাপদ খরচ ও খাত"></div></div>
+<div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4M8 11h8M8 15h5"/></svg><b class="d">নির্দিষ্ট বিল</b><span>ভাড়া, বিল আর কিস্তি, তারিখের আগে রিমাইন্ডারসহ।</span></div>
+<div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg><b class="d">ধার ও ঋণ</b><span>আপনার পাওনা আর দেনা, হোয়াটসঅ্যাপে নরম রিমাইন্ডার।</span></div>
+<div class="tile mint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="4" r="2"/><circle cx="19" cy="15" r="2"/><circle cx="5" cy="15" r="2"/></svg><b class="d">সমিতি</b><span>সদস্য, প্রত্যেকের পালা, আর এই মাসে কে দিল।</span></div>
+<div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg><b class="d">লক্ষ্য ও সঞ্চয়</b><span>জরুরি তহবিল বা ভ্রমণ, ধাপে ধাপে।</span></div>
+<div class="tile wide"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M10 21v-6h4v6"/></svg><div><b class="d">আপনার ছোট ব্যবসার জন্যও</b><br><span>বাকির খাতা, কাজের ক্যাশ, খামার আর সিএনজি: খরচ, বিক্রি ও লাভ, আপনার দেশের ভ্যাটসহ।</span></div></div>
+<div class="tile wide ink"><svg viewBox="0 0 24 24" fill="none" stroke="#8EE3C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;width:34px;height:34px"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/></svg><div><b class="d">মাসের রিপোর্ট হোয়াটসঅ্যাপে</b><br><span>পরিবারকে এক ট্যাপে পাঠান, বা Excel ফাইল ডাউনলোড করুন।</span></div></div>
+</div></div></section>
+<section class="blk" id="privacy"><div class="wrap priv">
+<div class="a pat"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F2C46A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h2 class="d">আপনার টাকা, আপনার গোপন কথা।</h2><p>অ্যাকাউন্ট নেই, লগইন নেই, কোনো সার্ভার আপনার সংখ্যা দেখে না। সব কিছু আপনার ফোনে, আর অ্যাপ মাসে একবার ব্যাকআপ রাখার কথা মনে করিয়ে দেয়।</p></div>
+<div class="b"><div class="phone"><img src="shot4.jpg" width="540" height="1170" loading="lazy" alt="ডার্ক মোড"></div><b class="d">রাতে চোখের আরাম</b></div>
+</div></section>
+<section class="blk"><div class="wrap langrow"><h2 class="d">আপনার ভাষা ও মুদ্রায়।</h2><div class="langs"><a href="https://weenfloosi.com/" lang="ar">العربية</a><a href="https://weenfloosi.com/en/" lang="en">English</a><a href="https://weenfloosi.com/fr/" lang="fr">Français</a><a href="https://weenfloosi.com/es/" lang="es">Español</a><a href="https://weenfloosi.com/pt/" lang="pt">Português</a><a href="https://weenfloosi.com/tr/" lang="tr">Türkçe</a><a href="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</a><a href="https://weenfloosi.com/ur/" lang="ur">اردو</a><a href="https://weenfloosi.com/hi/" lang="hi">हिन्दी</a><a href="https://weenfloosi.com/bn/" lang="bn" aria-current="page">বাংলা</a></div></div></section>
+<div class="wrap"><div class="final"><svg class="deco" viewBox="0 0 420 420" aria-hidden="true"><g fill="none" stroke="#0B3B32" stroke-width="2"><path d="M210 20l40 110 110 40-110 40-40 110-40-110-110-40 110-40z"/><circle cx="210" cy="210" r="190"/></g></svg><div><h2 class="d">আজই আপনার জার শুরু করুন।</h2><p>বিনামূল্যে, ইন্টারনেট ছাড়াও চলে।</p></div><a class="btn dark d" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app"><span style="color:#F2C46A;display:inline-flex"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17l14-8.5z"/></svg></span>Google Play থেকে নিন</a></div></div>
+</main>
+<footer><div class="wrap"><span><img src="../icon.png" alt="">© 2026 Ween Floosi</span><span><a href="https://weenfloosi.com/bn/privacy.html">গোপনীয়তা নীতি</a> · <a href="https://weenfloosi.com/bn/terms.html">সেবার শর্তাবলি</a> · <a href="mailto:support@weenfloosi.com">support@weenfloosi.com</a></span></div></footer>
+
 </body>
 </html>
