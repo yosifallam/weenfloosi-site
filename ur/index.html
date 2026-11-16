@@ -80,6 +80,15 @@ h2{margin:0;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.22}
 @keyframes bl{50%{opacity:0}}
 .demo .chips{display:flex;gap:10px;flex-wrap:wrap}
 .demo .chip{min-height:40px;font-size:15px}
+#split .txt{flex:1 1 420px}#split .ph{flex:1 1 500px}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+.pair figure{margin:0;display:flex;flex-direction:column;gap:10px;align-items:center}
+.pair figcaption{font-weight:700;font-size:15px}
+.pair .phone{width:min(250px,100%)}
+.pts{display:flex;flex-direction:column;gap:12px;margin-top:4px}
+.pt{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start}
+.pt i{width:40px;height:40px;border-radius:12px;background:var(--green);color:var(--gold2);display:grid;place-items:center;font-style:normal;font-weight:800}
+.pt b{display:block;font-size:17px}.pt span{color:var(--muted);font-size:15px}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
 .step{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:24px;display:flex;flex-direction:column;gap:8px}
 .step.hl{background:var(--gold);border-color:var(--gold);color:#0B3B32}
@@ -127,6 +136,8 @@ footer img{width:32px;height:32px;border-radius:10px}
 footer a{color:var(--on-green2)}
 @media (max-width:900px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.tile.big{min-height:0}}
 @media (max-width:640px){
+ .pair{gap:12px}
+
  .navr nav{display:none}
  .hero .wrap{padding-top:22px;padding-bottom:40px;gap:20px}
  .hero .btns .btn{flex:1 1 100%}
@@ -152,7 +163,7 @@ footer a{color:var(--on-green2)}
 <header><div class="wrap"><a class="brand d" href="https://weenfloosi.com/ur/"><img src="../icon.png" alt="">Ween Floosi</a><div class="navr"><nav aria-label="مینو"><a href="https://weenfloosi.com/ur/#how">یہ کیسے کام کرتی ہے</a><a href="https://weenfloosi.com/ur/#features">خصوصیات</a><a href="https://weenfloosi.com/ur/privacy.html">رازداری</a><a href="mailto:support@weenfloosi.com">رابطہ</a></nav><label class="langsel"><span aria-hidden="true">🌐</span><span class="sr">زبان</span><select aria-label="زبان" onchange="try{localStorage.setItem('wf-site-lang',this.options[this.selectedIndex].lang)}catch(e){};location.href=this.value"><option value="https://weenfloosi.com/" lang="ar">العربية</option><option value="https://weenfloosi.com/en/" lang="en">English</option><option value="https://weenfloosi.com/fr/" lang="fr">Français</option><option value="https://weenfloosi.com/es/" lang="es">Español</option><option value="https://weenfloosi.com/pt/" lang="pt">Português</option><option value="https://weenfloosi.com/tr/" lang="tr">Türkçe</option><option value="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</option><option value="https://weenfloosi.com/ur/" selected lang="ur">اردو</option><option value="https://weenfloosi.com/hi/" lang="hi">हिन्दी</option><option value="https://weenfloosi.com/bn/" lang="bn">বাংলা</option></select></label><a class="btn gold sm d" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app">مفت ڈاؤن لوڈ</a></div></div></header>
 <section class="hero"><div class="wrap">
 <div class="txt">
-<span class="badge">نیا: بالکل نیا انداز</span>
+<span class="badge">نیا: گھر کا خرچ اور ذمہ داریاں، ہر ایک اپنی جگہ</span>
 <h1 class="d">گھر کا سارا پیسہ،<br>ایک <span class="g">مرتبان</span> میں۔</h1>
 <p class="lead">ایک نظر میں دیکھیں اس مہینے کتنا باقی ہے، آج کتنا محفوظ خرچ کر سکتے ہیں، اور خرچ ایک جملے میں درج کریں، جیسے آپ بولتے ہیں۔</p>
 <div class="btns"><a class="btn gold d" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17l14-8.5z"/></svg>Google Play سے حاصل کریں</a><a class="btn ghost" href="#how">دیکھیں کیسے کام کرتی ہے</a></div>
@@ -178,6 +189,15 @@ footer a{color:var(--on-green2)}
 </div>
 <div class="ph"><div class="phone tilt"><img src="shot2.jpg" width="540" height="1170" loading="lazy" alt="ایک سطر میں سمارٹ اندراج"></div></div>
 </div></section>
+<section class="blk" id="split"><div class="wrap split">
+<div class="txt">
+<span class="eyebrow">نیا: گھر کا خرچ اور ذمہ داریاں، ہر ایک اپنی جگہ</span>
+<h2 class="d">گھر کا خرچ ایک طرف، ذمہ داریاں دوسری طرف۔</h2>
+<p class="sub">گھر کے ہر زمرے کا تفصیلی کارڈ اور اپنا بجٹ؛ بل، قرض، کمیٹی اور اہداف ایک ہی فہرست میں تاریخ کے حساب سے۔</p>
+<div class="pts"><div class="pt"><i class="d">1</i><div><b class="d">ہر زمرے کی تفصیل</b><span>بجٹ کا کتنا استعمال ہوا، پیسہ کہاں گیا، اور پچھلے مہینے سے موازنہ۔</span></div></div><div class="pt"><i class="d">2</i><div><b class="d">ذمہ داریاں تاریخ کے ساتھ</b><span>تاخیر، اس ہفتے، اس مہینے — اور ایک ٹیپ میں «ادا کر دیا»۔</span></div></div><div class="pt"><i class="d">3</i><div><b class="d">ماہانہ منصوبہ</b><span>پہلے ذمہ داریاں منہا، پھر باقی گھر کے زمروں میں تقسیم۔</span></div></div></div>
+</div>
+<div class="ph pair"><figure><div class="phone"><img src="shot3.jpg" width="540" height="1170" loading="lazy" alt="گھر کا خرچ"></div><figcaption class="d">گھر کا خرچ</figcaption></figure><figure><div class="phone"><img src="shot5.jpg" width="540" height="1170" loading="lazy" alt="تاریخ کے ساتھ ذمہ داریوں کی فہرست"></div><figcaption class="d">ذمہ داریاں</figcaption></figure></div>
+</div></section>
 <section class="blk"><div class="wrap">
 <h2 class="d">تین قدم، اور پتا چلے پیسہ کہاں گیا</h2>
 <div class="steps">
@@ -189,13 +209,15 @@ footer a{color:var(--on-green2)}
 <h2 class="d">گھر کے سارے اخراجات، ایک جگہ</h2>
 <p class="sub" style="margin-top:8px">صرف وہی فعال کریں جو چاہیے۔</p>
 <div class="bento">
-<div class="tile big"><div class="t"><b class="d">آج محفوظ خرچ</b><span>باقی رقم کو بقیہ دنوں پر تقسیم کرتی ہے، ادا نہ ہوئے بل نکال کر، اور بتاتی ہے اسی رفتار سے پیسہ کس دن ختم ہو گا۔</span></div><div class="phone"><img src="shot3.jpg" width="540" height="1170" loading="lazy" alt="آج محفوظ خرچ اور زمرے"></div></div>
+<div class="tile big"><div class="t"><b class="d">ماہانہ منصوبہ</b><span>پہلے ذمہ داریاں، پھر ہر زمرے کا بجٹ — اور غیر مختص رقم فوراً نظر آتی ہے۔</span></div><div class="phone"><img src="shot6.jpg" width="540" height="1170" loading="lazy" alt="ماہانہ منصوبہ"></div></div>
 <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4M8 11h8M8 15h5"/></svg><b class="d">مقررہ بل</b><span>کرایہ، بل اور قسطیں، تاریخ سے پہلے یاد دہانی کے ساتھ۔</span></div>
 <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg><b class="d">قرض اور ادھار</b><span>آپ کا لینا اور دینا، واٹس ایپ پر نرم یاد دہانی۔</span></div>
 <div class="tile mint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="4" r="2"/><circle cx="19" cy="15" r="2"/><circle cx="5" cy="15" r="2"/></svg><b class="d">کمیٹی</b><span>ممبر، ہر ایک کی باری، اور اس مہینے کس نے دیا۔</span></div>
 <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg><b class="d">اہداف اور بچت</b><span>ایمرجنسی فنڈ یا سفر، قدم بہ قدم۔</span></div>
 <div class="tile wide"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M10 21v-6h4v6"/></svg><div><b class="d">آپ کے چھوٹے کاروبار کے لیے بھی</b><br><span>ادھار کھاتہ، کام کی رقم، کھیت اور ٹیکسی: لاگت، فروخت اور منافع، آپ کے ملک کے ٹیکس کے ساتھ۔</span></div></div>
 <div class="tile wide ink"><svg viewBox="0 0 24 24" fill="none" stroke="#8EE3C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;width:34px;height:34px"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/></svg><div><b class="d">مہینے کی رپورٹ واٹس ایپ پر</b><br><span>گھر والوں کو ایک ٹیپ میں بھیجیں، یا Excel فائل ڈاؤن لوڈ کریں۔</span></div></div>
+<div class="tile wide mint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg><div><b class="d">شام کی یاد دہانی</b><br><span>روزانہ رات 9 بجے: «آج کچھ خرچ کیا؟» 50 اور 100 کے بٹنوں کے ساتھ۔</span></div></div>
+<div class="tile wide"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><div><b class="d">آسان موڈ</b><br><span>بڑا خط اور صرف تین بٹن — والدین کے لیے۔</span></div></div>
 </div></div></section>
 <section class="blk" id="privacy"><div class="wrap priv">
 <div class="a pat"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F2C46A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h2 class="d">آپ کا پیسہ، آپ کا راز۔</h2><p>نہ اکاؤنٹ، نہ لاگ ان، نہ کوئی سرور جو آپ کے نمبر دیکھے۔ سب کچھ آپ کے فون میں، اور ایپ مہینے میں ایک بار بیک اپ کی یاد دلاتی ہے۔</p></div>

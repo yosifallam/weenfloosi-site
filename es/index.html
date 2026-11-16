@@ -80,6 +80,15 @@ h2{margin:0;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.22}
 @keyframes bl{50%{opacity:0}}
 .demo .chips{display:flex;gap:10px;flex-wrap:wrap}
 .demo .chip{min-height:40px;font-size:15px}
+#split .txt{flex:1 1 420px}#split .ph{flex:1 1 500px}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+.pair figure{margin:0;display:flex;flex-direction:column;gap:10px;align-items:center}
+.pair figcaption{font-weight:700;font-size:15px}
+.pair .phone{width:min(250px,100%)}
+.pts{display:flex;flex-direction:column;gap:12px;margin-top:4px}
+.pt{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start}
+.pt i{width:40px;height:40px;border-radius:12px;background:var(--green);color:var(--gold2);display:grid;place-items:center;font-style:normal;font-weight:800}
+.pt b{display:block;font-size:17px}.pt span{color:var(--muted);font-size:15px}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
 .step{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:24px;display:flex;flex-direction:column;gap:8px}
 .step.hl{background:var(--gold);border-color:var(--gold);color:#0B3B32}
@@ -127,6 +136,8 @@ footer img{width:32px;height:32px;border-radius:10px}
 footer a{color:var(--on-green2)}
 @media (max-width:900px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.tile.big{min-height:0}}
 @media (max-width:640px){
+ .pair{gap:12px}
+
  .navr nav{display:none}
  .hero .wrap{padding-top:22px;padding-bottom:40px;gap:20px}
  .hero .btns .btn{flex:1 1 100%}
@@ -152,7 +163,7 @@ footer a{color:var(--on-green2)}
 <header><div class="wrap"><a class="brand d" href="https://weenfloosi.com/es/"><img src="../icon.png" alt="">Ween Floosi</a><div class="navr"><nav aria-label="Menú"><a href="https://weenfloosi.com/es/#how">Cómo funciona</a><a href="https://weenfloosi.com/es/#features">Funciones</a><a href="https://weenfloosi.com/es/privacy.html">Privacidad</a><a href="mailto:support@weenfloosi.com">Contacto</a></nav><label class="langsel"><span aria-hidden="true">🌐</span><span class="sr">Idioma</span><select aria-label="Idioma" onchange="try{localStorage.setItem('wf-site-lang',this.options[this.selectedIndex].lang)}catch(e){};location.href=this.value"><option value="https://weenfloosi.com/" lang="ar">العربية</option><option value="https://weenfloosi.com/en/" lang="en">English</option><option value="https://weenfloosi.com/fr/" lang="fr">Français</option><option value="https://weenfloosi.com/es/" selected lang="es">Español</option><option value="https://weenfloosi.com/pt/" lang="pt">Português</option><option value="https://weenfloosi.com/tr/" lang="tr">Türkçe</option><option value="https://weenfloosi.com/id/" lang="id">Bahasa Indonesia</option><option value="https://weenfloosi.com/ur/" lang="ur">اردو</option><option value="https://weenfloosi.com/hi/" lang="hi">हिन्दी</option><option value="https://weenfloosi.com/bn/" lang="bn">বাংলা</option></select></label><a class="btn gold sm d" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app">Descárgala gratis</a></div></div></header>
 <section class="hero"><div class="wrap">
 <div class="txt">
-<span class="badge">Nuevo: un diseño totalmente nuevo</span>
+<span class="badge">Nuevo: gasto del hogar y compromisos, cada uno en su sitio</span>
 <h1 class="d">El dinero de casa,<br>en un solo <span class="g">tarro</span>.</h1>
 <p class="lead">Mira de un vistazo cuánto te queda este mes, cuánto puedes gastar hoy con seguridad, y anota un gasto en una frase, tal como lo dirías.</p>
 <div class="btns"><a class="btn gold d" href="https://play.google.com/store/apps/details?id=com.weenfloosi.app"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.5v17l14-8.5z"/></svg>Disponible en Google Play</a><a class="btn ghost" href="#how">Mira cómo funciona</a></div>
@@ -178,6 +189,15 @@ footer a{color:var(--on-green2)}
 </div>
 <div class="ph"><div class="phone tilt"><img src="shot2.jpg" width="540" height="1170" loading="lazy" alt="Añadir inteligente en una línea"></div></div>
 </div></section>
+<section class="blk" id="split"><div class="wrap split">
+<div class="txt">
+<span class="eyebrow">Nuevo: gasto del hogar y compromisos, cada uno en su sitio</span>
+<h2 class="d">El gasto del hogar por un lado, los compromisos por otro.</h2>
+<p class="sub">Cada categoría del hogar tiene su tarjeta detallada y su presupuesto; facturas, deudas, círculo de ahorro y metas van en una sola lista por fecha.</p>
+<div class="pts"><div class="pt"><i class="d">1</i><div><b class="d">Detalle de cada categoría</b><span>Cuánto del presupuesto usaste, a dónde fue el dinero y cómo va frente al mes pasado.</span></div></div><div class="pt"><i class="d">2</i><div><b class="d">Compromisos por fecha</b><span>Atrasado, esta semana, este mes — y «Pagado» con un toque.</span></div></div><div class="pt"><i class="d">3</i><div><b class="d">Plan del mes</b><span>Primero los compromisos; luego repartes el resto entre las categorías del hogar.</span></div></div></div>
+</div>
+<div class="ph pair"><figure><div class="phone"><img src="shot3.jpg" width="540" height="1170" loading="lazy" alt="Gasto del hogar"></div><figcaption class="d">Gasto del hogar</figcaption></figure><figure><div class="phone"><img src="shot5.jpg" width="540" height="1170" loading="lazy" alt="Lista de compromisos por fecha"></div><figcaption class="d">Compromisos</figcaption></figure></div>
+</div></section>
 <section class="blk"><div class="wrap">
 <h2 class="d">Tres pasos para saber a dónde va tu dinero</h2>
 <div class="steps">
@@ -189,13 +209,15 @@ footer a{color:var(--on-green2)}
 <h2 class="d">Todas las cuentas de casa, en un solo lugar</h2>
 <p class="sub" style="margin-top:8px">Activa solo lo que necesitas.</p>
 <div class="bento">
-<div class="tile big"><div class="t"><b class="d">Gasto seguro de hoy</b><span>Reparte lo que queda entre los días restantes tras las facturas pendientes, y te dice qué día se acaba el dinero si sigues al mismo ritmo.</span></div><div class="phone"><img src="shot3.jpg" width="540" height="1170" loading="lazy" alt="Gasto seguro de hoy y categorías"></div></div>
+<div class="tile big"><div class="t"><b class="d">Plan del mes</b><span>Primero los compromisos, luego un presupuesto por categoría — y ves lo que queda sin asignar.</span></div><div class="phone"><img src="shot6.jpg" width="540" height="1170" loading="lazy" alt="Plan del mes"></div></div>
 <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4M8 11h8M8 15h5"/></svg><b class="d">Gastos fijos</b><span>Alquiler, facturas y cuotas, con aviso antes del vencimiento.</span></div>
 <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg><b class="d">Deudas y préstamos</b><span>Lo que te deben y lo que debes, con un recordatorio por WhatsApp.</span></div>
 <div class="tile mint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="4" r="2"/><circle cx="19" cy="15" r="2"/><circle cx="5" cy="15" r="2"/></svg><b class="d">Círculo de ahorro</b><span>Los miembros, el turno de cada uno y quién pagó este mes.</span></div>
 <div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg><b class="d">Metas y ahorro</b><span>Un fondo de emergencia o un viaje, paso a paso.</span></div>
 <div class="tile wide"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M10 21v-6h4v6"/></svg><div><b class="d">También para tu pequeño negocio</b><br><span>Libreta de fiado, caja chica, finca y taxi: costos, ventas y ganancia, con el IVA de tu país.</span></div></div>
 <div class="tile wide ink"><svg viewBox="0 0 24 24" fill="none" stroke="#8EE3C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;width:34px;height:34px"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/></svg><div><b class="d">Informe del mes por WhatsApp</b><br><span>Envíalo a tu familia con un toque o descarga un Excel.</span></div></div>
+<div class="tile wide mint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg><div><b class="d">Recordatorio nocturno</b><br><span>Cada día a las 21 h: «¿Gastaste algo hoy?» con botones de 50 y 100.</span></div></div>
+<div class="tile wide"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><div><b class="d">Modo sencillo</b><br><span>Letra grande y solo tres botones — ideal para padres.</span></div></div>
 </div></div></section>
 <section class="blk" id="privacy"><div class="wrap priv">
 <div class="a pat"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F2C46A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h2 class="d">Tu dinero, tu secreto.</h2><p>Sin cuenta, sin inicio de sesión, ningún servidor ve tus cifras. Todo se guarda en tu teléfono, y la app te recuerda cada mes hacer una copia de seguridad.</p></div>
