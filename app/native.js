@@ -1,0 +1,1 @@
+window.CapPlugins=null;
